@@ -57,8 +57,6 @@ body {
     margin: 20px auto;
     max-width: 100%;
   }
-  
-  /* Form Styling */
   form {
     display: flex;
     flex-direction: column;
