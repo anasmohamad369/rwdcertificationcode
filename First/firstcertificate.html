@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Survey Form</h1>
+    <p id="description">We would love to hear your feedback! Please fill out this survey.</p>
+    
+    <form id="survey-form">
+      <label for="name" id="name-label">Name</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        placeholder="Enter your name" 
+        required>
+      
+      <label for="email" id="email-label">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="Enter your email" 
+        required>
+      
+      <label for="number" id="number-label">Age</label>
+      <input 
+        type="number" 
+        id="number" 
+        name="age" 
+        min="18" 
+        max="99" 
+        placeholder="Enter your age" 
+        required>
+      
+      <label for="dropdown">What is your role?</label>
+      <select id="dropdown" name="role" required>
+        <option value="" disabled selected>Select your role</option>
+        <option value="student">Student</option>
+        <option value="professional">Professional</option>
+      </select>
+      
+      <p>What is your gender?</p>
+      <label><input type="radio" name="gender" value="male" required> Male</label>
+      <label><input type="radio" name="gender" value="female" required> Female</label>
+      
+      <p>Select your preferences:</p>
+      <label><input type="checkbox" name="preference" value="sports"> Sports</label>
+      <label><input type="checkbox" name="preference" value="music"> Music</label>
+      <label><input type="checkbox" name="preference" value="travel"> Travel</label>
+      
+      <label for="comments">Any additional comments:</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Your comments here..."></textarea>
+      
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
